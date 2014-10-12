@@ -12,7 +12,7 @@ import XCTest
 /**
  * Test cases for ArrayExtension.
  */
-class ArrayExtensionTest
+class ArrayExtensionTest: XCTestCase
 {
   /**
    * Tests a call to Array.forEach invokes the closure for each element in the array.

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CF4C8C19EAA737000B4CF5 /* HashableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF4C8B19EAA737000B4CF5 /* HashableBuilder.swift */; };
+		01CF4C8D19EAA737000B4CF5 /* HashableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF4C8B19EAA737000B4CF5 /* HashableBuilder.swift */; };
+		01FA451119EAE30400B7CE98 /* HashableBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339768F556A199E07A3921D9 /* HashableBuilderTest.swift */; };
+		01FA451219EAE30800B7CE98 /* ArrayExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339760879076797552BACE71 /* ArrayExtensionTest.swift */; };
+		01FA451319EAE30E00B7CE98 /* EquatableBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33976DFA07C0C0E210C7BA00 /* EquatableBuilderTest.swift */; };
 		33976137222470C6CEB7C6A9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339769F30930828F7704CEF5 /* StringExtension.swift */; };
-		339766A98B40F8E43439DBE0 /* EquatableBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33976DFA07C0C0E210C7BA00 /* EquatableBuilderTest.swift */; };
-		33976762A436DA6CD4112563 /* ArrayExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339760879076797552BACE71 /* ArrayExtensionTest.swift */; };
 		339768D486133C8052F6997E /* EquatableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33976C092D91B228EA653FC9 /* EquatableBuilder.swift */; };
 		33976C0415D6F561AF158734 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397639FE995B0E9BE1034F4 /* ArrayExtension.swift */; };
 		33976DD6CD493A1380D7CB1E /* EquatableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33976C092D91B228EA653FC9 /* EquatableBuilder.swift */; };
@@ -22,8 +25,10 @@
 		01BEA13919E9D1B800F64AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BEA14019E9D1B800F64AB3 /* swift-commons-foundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-commons-foundationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BEA14319E9D1B800F64AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CF4C8B19EAA737000B4CF5 /* HashableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableBuilder.swift; sourceTree = "<group>"; };
 		339760879076797552BACE71 /* ArrayExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTest.swift; sourceTree = "<group>"; };
 		3397639FE995B0E9BE1034F4 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		339768F556A199E07A3921D9 /* HashableBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableBuilderTest.swift; sourceTree = "<group>"; };
 		339769F30930828F7704CEF5 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		33976C092D91B228EA653FC9 /* EquatableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableBuilder.swift; sourceTree = "<group>"; };
 		33976DFA07C0C0E210C7BA00 /* EquatableBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableBuilderTest.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 				33976C092D91B228EA653FC9 /* EquatableBuilder.swift */,
 				3397639FE995B0E9BE1034F4 /* ArrayExtension.swift */,
 				339769F30930828F7704CEF5 /* StringExtension.swift */,
+				01CF4C8B19EAA737000B4CF5 /* HashableBuilder.swift */,
 			);
 			path = "swift-commons-foundation";
 			sourceTree = "<group>";
@@ -92,6 +98,7 @@
 				01BEA14219E9D1B800F64AB3 /* Supporting Files */,
 				33976DFA07C0C0E210C7BA00 /* EquatableBuilderTest.swift */,
 				339760879076797552BACE71 /* ArrayExtensionTest.swift */,
+				339768F556A199E07A3921D9 /* HashableBuilderTest.swift */,
 			);
 			path = "swift-commons-foundationTests";
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 				33976DD6CD493A1380D7CB1E /* EquatableBuilder.swift in Sources */,
 				33976C0415D6F561AF158734 /* ArrayExtension.swift in Sources */,
 				33976137222470C6CEB7C6A9 /* StringExtension.swift in Sources */,
+				01CF4C8C19EAA737000B4CF5 /* HashableBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339766A98B40F8E43439DBE0 /* EquatableBuilderTest.swift in Sources */,
+				01CF4C8D19EAA737000B4CF5 /* HashableBuilder.swift in Sources */,
 				339768D486133C8052F6997E /* EquatableBuilder.swift in Sources */,
-				33976762A436DA6CD4112563 /* ArrayExtensionTest.swift in Sources */,
+				01FA451119EAE30400B7CE98 /* HashableBuilderTest.swift in Sources */,
 				33976DF8172368D4470DF106 /* ArrayExtension.swift in Sources */,
 				33976F43AAD0C78DA58C405F /* StringExtension.swift in Sources */,
+				01FA451319EAE30E00B7CE98 /* EquatableBuilderTest.swift in Sources */,
+				01FA451219EAE30800B7CE98 /* ArrayExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +406,7 @@
 				01BEA14A19E9D1B800F64AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01BEA14B19E9D1B800F64AB3 /* Build configuration list for PBXNativeTarget "swift-commons-foundationTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +415,7 @@
 				01BEA14D19E9D1B800F64AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

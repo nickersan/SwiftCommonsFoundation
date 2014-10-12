@@ -9,20 +9,23 @@
 import Foundation
 
 /**
- * A builder that accepts one or more value pairs, that are then compared for equality when the equals method is called
+ * A builder that accepts one or more value pairs that are then compared for equality
  */
 class EquatableBuilder
 {
-  var equatablePairs: [(() -> Bool)] = []
+  /**
+   * The current state of the builder with the values appended to it.
+   */
+  var equals: Bool = true
 
   /**
    * Appends the Characters to this EquatableBuilder so that they will be compared with:
    *
    * @code lhs == rhs
    */
-  func append(#lhs: Character, rhs: Character) -> EquatableBuilder
+  func append(#lhs: Character?, rhs: Character?) -> EquatableBuilder
   {
-    self.equatablePairs.append({lhs == rhs})
+    self.equals = self.equals && (lhs == rhs)
     return self;
   }
 
@@ -31,9 +34,9 @@ class EquatableBuilder
    *
    * @code lhs == rhs
    */
-  func append(#lhs: Int, rhs: Int) -> EquatableBuilder
+  func append(#lhs: Int?, rhs: Int?) -> EquatableBuilder
   {
-    self.equatablePairs.append({lhs == rhs})
+    self.equals = self.equals && (lhs == rhs)
     return self;
   }
 
@@ -42,19 +45,9 @@ class EquatableBuilder
    *
    * @code lhs == rhs
    */
-  func append<T: Equatable>(#lhs: T, rhs: T) -> EquatableBuilder
+  func append<T: Equatable>(#lhs: T?, rhs: T?) -> EquatableBuilder
   {
-    self.equatablePairs.append({lhs == rhs})
+    self.equals = self.equals && (lhs == rhs)
     return self;
-  }
-
-  /**
-   * Calculates equality based on the pair previously added to this EquatableBuilder.
-   *
-   * @return true if all the pairs added to the EquatableBuilder are 'equal'; otherwise false.
-   */
-  func equals() -> Bool
-  {
-    return equatablePairs.forEach({(element: (() -> Bool)) -> Bool in return element()})
   }
 }

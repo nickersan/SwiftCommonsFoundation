@@ -20,7 +20,7 @@ class EquatableBuilderTest: XCTestCase
   func testEmptyBuilder()
   {
     XCTAssert(
-      EquatableBuilder().equals(),
+      EquatableBuilder().equals,
       "Failed to return true from an empty builder"
     )
   }
@@ -31,12 +31,17 @@ class EquatableBuilderTest: XCTestCase
   func testWithCharacters()
   {
     XCTAssert(
-      EquatableBuilder().append(lhs: "a", rhs: "a").equals(),
+      EquatableBuilder().append(lhs: "a", rhs: "a").equals,
       "Failed to return true from a builder with matching character values"
     )
 
     XCTAssert(
-      !EquatableBuilder().append(lhs: "a", rhs: "b").equals(),
+      !EquatableBuilder().append(lhs: "a", rhs: "b").equals,
+      "Failed to return false from a builder with non-matching character values"
+    )
+
+    XCTAssert(
+      !EquatableBuilder().append(lhs: "a", rhs: nil).equals,
       "Failed to return false from a builder with non-matching character values"
     )
   }
@@ -47,12 +52,12 @@ class EquatableBuilderTest: XCTestCase
   func testWithEquatables()
   {
     XCTAssert(
-      EquatableBuilder().append(lhs: "match", rhs: "match").equals(),
+      EquatableBuilder().append(lhs: "match", rhs: "match").equals,
       "Failed to return true from a builder with matching equatable values"
     )
 
     XCTAssert(
-      !EquatableBuilder().append(lhs: "match", rhs: "no-match").equals(),
+      !EquatableBuilder().append(lhs: "match", rhs: "no-match").equals,
       "Failed to return false from a builder with non-matching equatable values"
     )
   }
@@ -63,12 +68,12 @@ class EquatableBuilderTest: XCTestCase
   func testWithInts()
   {
     XCTAssert(
-      EquatableBuilder().append(lhs: 1, rhs: 1).equals(),
+      EquatableBuilder().append(lhs: 1, rhs: 1).equals,
       "Failed to return true from a builder with matching int values"
     )
 
     XCTAssert(
-      !EquatableBuilder().append(lhs: 1, rhs: 2).equals(),
+      !EquatableBuilder().append(lhs: 1, rhs: 2).equals,
       "Failed to return false from a builder with non-matching int values"
     )
   }

@@ -16,13 +16,35 @@ class EquatableBuilder
   var equatablePairs: [(() -> Bool)] = []
 
   /**
+   * Appends the Characters to this EquatableBuilder so that they will be compared with:
+   *
+   * @code lhs == rhs
+   */
+  func append(#lhs: Character, rhs: Character) -> EquatableBuilder
+  {
+    self.equatablePairs.append({lhs == rhs})
+    return self;
+  }
+
+  /**
+   * Appends the Ints to this EquatableBuilder so that they will be compared with:
+   *
+   * @code lhs == rhs
+   */
+  func append(#lhs: Int, rhs: Int) -> EquatableBuilder
+  {
+    self.equatablePairs.append({lhs == rhs})
+    return self;
+  }
+
+  /**
    * Appends the Strings to this EquatableBuilder so that they will be compared with:
    *
-   * @code s1 == s2
+   * @code lhs == rhs
    */
-  func append(#s1: String, s2: String) -> EquatableBuilder
+  func append<T: Equatable>(#lhs: T, rhs: T) -> EquatableBuilder
   {
-    self.equatablePairs.append({s1 == s2})
+    self.equatablePairs.append({lhs == rhs})
     return self;
   }
 

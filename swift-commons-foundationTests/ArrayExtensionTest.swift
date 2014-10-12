@@ -24,7 +24,10 @@ class ArrayExtensionTest
 
     strings.forEach({(element: String) in s += element})
 
-    XCTAssert(s == "abc", "Failed to iterate over the elements in the Array")
+    XCTAssert(
+      s == "abc",
+      "Failed to iterate over the elements in the Array"
+    )
   }
 
   /**
@@ -43,6 +46,21 @@ class ArrayExtensionTest
       }
     )
 
-    XCTAssert(s == "ab", "Failed to iterate over the elements in the Array and break when told to")
+    XCTAssert(
+      s == "ab",
+      "Failed to iterate over the elements in the Array and break when told to"
+    )
   }
-}
+
+  /**
+   * Tests a call to Array.reduce returns the expect result.
+   */
+  func testReduce()
+  {
+    let ints: [Int] = [1, 2, 3]
+    XCTAssert(
+      10 == ints.reduce(4, {(result: Int, element: Int) -> Int in result + element}),
+      "Failed to reduce to expected value"
+    )
+  }
+ }

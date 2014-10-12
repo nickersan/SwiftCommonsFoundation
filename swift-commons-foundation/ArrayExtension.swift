@@ -41,18 +41,6 @@ extension Array
   }
 
   /**
-   * Maps the content of the Array from one type to another.
-   *
-   * @return a new array containing the mapped results.
-   */
-  func map<R>(mapper: (element: T) -> R) -> [R]
-  {
-    var result: [R] = []
-    self.forEach({(element: T) in result.append(mapper(element: element))})
-    return result
-  }
-
-  /**
    * Reduces the content of the Array to a single value using the accumulator.
    *
    * @return the value created by passing each element in the array to the accumulator.
